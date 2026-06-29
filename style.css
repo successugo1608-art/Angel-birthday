@@ -1,0 +1,431 @@
+
+h1{
+    font-family: "Parisienne", cursive;
+
+    font-size:50px;
+    color:#f7d6ff;
+}
+body{
+    margin:0;
+    padding:0;
+    min-height:100vh;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(156,39,176,.35), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(103,58,183,.25), transparent 30%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,.04), transparent 60%),
+        linear-gradient(to bottom,#03020d,#09051b,#14082d,#03020d);
+
+    color:white;
+    font-family:Arial, sans-serif;
+
+    overflow-x:hidden;
+    position:relative;
+}
+input{padding: 10px;}
+button{padding: 10px 20px; 
+       cursor: pointer;}
+h1{color: rgb(140, 0, 255);}
+
+.constellation{
+    position: relative;
+    height: 650px;
+}
+.star{ 
+    position: absolute;
+    font-size: 55px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s; 
+}
+.star:hover{
+    transform: scale(1.25);
+}
+.one{
+    top:40px;
+    left:8%;
+}
+
+.two{
+    top:100px;
+    left:70%;
+}
+
+.three{
+    top:240px;
+    left:18%;
+}
+
+.four{
+    top:300px;
+    left:78%;
+}
+
+.five{
+    top:430px;
+    left:45%;
+}
+.birthday {
+    text-align: center;
+    margin-top: 20px;
+
+}
+.birthday button{
+    font-size: 90px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#memory{
+    width: 80%;
+    max-height: 900px;
+    margin: 50px auto; 
+    background: rgba(255, 255, 255, 0.08);
+    border-radius:20px; 
+    padding: 30px; 
+    text-align: center;
+}
+#memory img {
+    width: 220px; 
+    border-radius: 18px; 
+    margin: 12px;
+}
+.space span{
+    position: absolute;
+    width: 3px;
+    height: 3px; 
+    background: white;
+    border-radius: 50%; 
+    animation: twinkle 2s infinite alternate;
+}
+.space span:nth-child(1){
+    top: 10%;
+    left: 20%;
+}
+.space span:nth-child(2){
+    top: 15%;
+    left: 70%;
+}
+.space span:nth-child(3){
+    top: 30%;
+    left: 40%;
+}
+.space span:nth-child(4){
+    top: 45%;
+    left: 80%;
+}
+.space span:nth-child(5){
+    top: 70%;
+    left: 25%;
+}
+.space span:nth-child(6){
+    top: 80%;
+    left: 60%;
+}
+.space span:nth-child(7){
+    top: 60%;
+    left: 10%;
+}
+.space span:nth-child(8){
+    top: 25%;
+    left: 90%;
+}
+.space span:nth-child(9){
+    top: 50%;
+    left: 50%;
+}
+.space span:nth-child(10){
+    top: 95%;
+    left: 85%;
+}
+@keyframes twinkle{
+    from{
+    opacity:.3;
+}
+
+to{
+    opacity:1;
+}
+}
+.shooting{
+    position:absolute;
+    width:120px;
+    height:2px;
+    background:linear-gradient(to right, white, transparent);
+    transform:rotate(-35deg);
+    animation:shoot 8s linear infinite;
+    opacity:0;
+}
+
+.shooting.one{
+    top:10%;
+    right:-150px;
+}
+
+.shooting.two{
+    top:35%;
+    right:-200px;
+}
+
+.shooting.three{
+    top:65%;
+    right:-250px;
+}
+
+@keyframes shoot{
+
+0%{
+    transform:translateX(0) translateY(0) rotate(-35deg);
+    opacity:0;
+}
+
+10%{
+    opacity:1;
+}
+
+80%{
+    opacity:1;
+}
+
+100%{
+    transform:translateX(-1600px) translateY(350px) rotate(35deg);
+    opacity:0;
+}
+}
+.line{
+    position:absolute;
+    height:2px;
+    background:rgba(255,255,255,0.5);
+    box-shadow:0 0 10px #ffffff;
+    transform-origin:left center;
+}
+.line{
+    position:absolute;
+    height:2px;
+    background:rgba(255,255,255,.5);
+    box-shadow:0 0 8px #d7b3ff;
+    transform-origin:left center;
+    z-index:1;
+}
+
+.star{
+    position:absolute;
+    z-index:2;
+}
+.line1{
+    width:73%;
+    top:208px;
+    left:12%;
+    transform:rotate(15deg);
+}
+.line2{
+    width:46%;
+    top:408px;
+    left:22%;
+    transform:rotate(50deg);
+}
+.line3{
+    width:36%;
+    top:270px;
+    left:76%;
+    transform:rotate(137deg);
+}
+.line4{
+    width:18%;
+    top:265px;
+    left:75%;
+    transform:rotate(65deg);
+}
+.line{
+    position:absolute;
+    height:2px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,.9),
+        transparent
+    );
+
+    box-shadow:
+        0 0 6px white,
+        0 0 12px #c084fc;
+
+    opacity:.7;
+}
+.line{
+    z-index: 1;
+}
+.star{
+    position: absolute;
+    z-index: 2;
+}
+.memory-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    justify-items:center;
+
+    margin-top:30px;
+}
+.photo{
+
+    background:rgba(255,255,255,.08);
+
+    padding:15px;
+
+    border-radius:20px;
+
+    text-align:center;
+}
+.photo img{
+
+    width:180px;
+
+    height:240px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+.photo p{
+
+    margin-top:10px;
+
+    color:white;
+
+    font-size:15px;
+
+}
+.photo video{
+    width:280px;
+    height:340px;
+    object-fit:cover;
+    border-radius:15px;
+    display:block;
+}
+.birthday-star{
+    position:absolute;
+
+    top:70%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+    font-size:90px;
+
+    background:none;
+    border:none;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    animation:pulse 2s infinite;
+
+    z-index:3;
+}
+.birthday-star:hover{
+
+    transform:translate(-50%,-50%) scale(1.2);
+
+    filter:drop-shadow(0 0 20px #ffd700);
+
+}
+@keyframes pulse{
+
+    0%{
+        transform:translate(-50%,-50%) scale(1);
+    }
+
+    50%{
+        transform:translate(-50%,-50%) scale(1.08);
+    }
+
+    100%{
+        transform:translate(-50%,-50%) scale(1);
+    }
+
+}
+.birthday-star{
+
+    text-shadow:
+        0 0 10px white,
+        0 0 20px #ffd700,
+        0 0 35px #ffb6ff,
+        0 0 50px #c084fc;
+
+}
+.birthday-card h1{
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 10px #c084fc,
+        0 0 25px #e9d5ff;
+}
+.birthday-card p{
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: #f7d6ff;
+}
+@media (max-width:768px){
+
+.memory-grid{
+
+    grid-template-columns:1fr;
+
+} 
+.photo img,
+.photo video{
+
+    width:min(220px, 90%);
+    height:auto;
+
+}
+
+.one{
+    left:45%;
+    top:70px;
+    font-size: 55px;
+}
+
+.two{
+    left:30%;
+    top:180px;
+    font-size: 55px;
+}
+
+.three{
+    left:60%;
+    top:300px;
+    font-size: 55px;
+}
+
+.four{
+    left:25%;
+    top:430px;
+    font-size: 55px;
+}
+
+.five{
+    left:55%;
+    top:560px;
+    font-size: 55px;
+
+}
+#memory{
+    width:90%;
+    margin:40px auto;
+    padding:20px;
+}
+.photo{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+}
